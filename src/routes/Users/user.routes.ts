@@ -11,6 +11,6 @@ UsersRouter.post("/", userRegisterValidation(), Validate, HandleErrors(UsersCont
 UsersRouter.post("/login", userLoginValidation(), Validate, HandleErrors(UsersControllers.Login));
 UsersRouter.post("/profile", Authenticate, HandleErrors(UsersControllers.AutoLogin));
 UsersRouter.patch("/", Authenticate, userEditValidation(), Validate, HandleErrors(UsersControllers.Edit));
-UsersRouter.patch("/password", Authenticate, userChangePasswordValidation(), Validate);
+UsersRouter.patch("/password", Authenticate, userChangePasswordValidation(), Validate, HandleErrors(UsersControllers.ChangePassword));
 
 export { UsersRouter };
