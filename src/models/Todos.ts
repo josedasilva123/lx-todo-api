@@ -1,8 +1,7 @@
-import { Schema, model, ObjectId } from "mongoose";
+import { Schema, model} from "mongoose";
 import { iCategory } from "./Categories";
 
 interface iTodo{
-    id?: ObjectId;
     userId: string;
     title: string;
     content: string;
