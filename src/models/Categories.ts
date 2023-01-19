@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose";
 
-export interface iCategory {
+interface iCategory {
    label: string;
    slug: string;
 }
