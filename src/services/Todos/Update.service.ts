@@ -1,0 +1,33 @@
+import { ObjectId } from "mongodb";
+import Todos from "../../models/Todos";
+
+export class TodosUpdate {
+   async execute(body: any, params: any) {
+      const { noteId } = params;
+      const { _id, title, content, category } = body;
+      const todoObjectId = new ObjectId(noteId);
+
+      const note = await Todos.findOne({ _id: todoObjectId });
+
+      if (!note) {
+         throw new Error("A nota que você está tentando editar não existe.");
+      }
+
+      if (note.userId !== _id) {
+         throw new Error("Você não tem autorização para editar essa nota");
+      }
+
+      const updatedNote = await Todos.updateOne(
+         { _id: todoObjectId },
+         {
+            $set: {
+               title,
+               content,
+               category,
+            },
+         }
+      );
+
+      return { note: updatedNote, message: "Nota editada com sucesso!" };
+   }
+}
