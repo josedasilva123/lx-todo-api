@@ -11,7 +11,7 @@ export function Authenticate(req: Request, res: Response, next: NextFunction) {
                throw new Error("Sua token expirou ou é inválida.");
             }
 
-            (req.body.id = decoded?.id), next();
+            (req.body._id = decoded?._id), next();
          } catch (error) {
             res.status(400).json({ error: "Sua token expirou ou é inválida." });
          }
