@@ -1,9 +1,8 @@
 import { ObjectId } from "mongodb";
 import Users from "../../models/Users";
-import bcrypt from "bcryptjs";
 
-export class UserChangePassword {
-   async execute(body: any) {
+export class UserEdit {
+   async execute(body: iUserEditBody) {
       const { _id, name } = body;
 
       const userObjectId = new ObjectId(_id);

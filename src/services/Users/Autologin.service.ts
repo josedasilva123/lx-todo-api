@@ -2,7 +2,7 @@ import { ObjectId } from "mongodb";
 import Users from "../../models/Users";
 
 export class UserAutoLogin{
-    async execute(body: any){
+    async execute(body: iAuthenticatedBody){
         const { _id } = body;
         const objectUserId = new ObjectId(_id);
 

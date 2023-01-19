@@ -3,7 +3,7 @@ import Users from "../../models/Users";
 import bcrypt from "bcryptjs";
 
 export class UserChangePassword {
-   async execute(body: any) {
+   async execute(body: iUserChangePasswordBody) {
       const { _id, currentPassword, newPassword } = body;
 
       const userObjectId = new ObjectId(_id);

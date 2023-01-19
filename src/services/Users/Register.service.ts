@@ -3,7 +3,7 @@ import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 
 export class UserRegister {
-   async execute(body: any) {
+   async execute(body: iUserRegisterBody) {
       const { name, email, password } = body;
 
       const existingUser = await Users.findOne({ email: email });
