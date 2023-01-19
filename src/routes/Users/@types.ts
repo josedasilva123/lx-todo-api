@@ -1,23 +1,23 @@
-interface iAuthenticatedBody{
+export interface iAuthenticatedBody{
     _id: string;
 }
 
-interface iUserRegisterBody{
+export interface iUserRegisterBody{
     name: string;
     email: string;
     password: string;   
 }
 
-interface iUserLoginBody{
+export interface iUserLoginBody{
     email: string;
     password: string;
 }
 
-interface iUserEditBody extends iAuthenticatedBody{
+export interface iUserEditBody extends iAuthenticatedBody{
     name: string;
 }
 
-interface iUserChangePasswordBody extends iAuthenticatedBody{
+export interface iUserChangePasswordBody extends iAuthenticatedBody{
     currentPassword: string;
     newPassword: string;
 }

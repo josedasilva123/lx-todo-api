@@ -1,5 +1,6 @@
 import { ObjectId } from "mongodb";
 import Users from "../../models/Users";
+import { iUserEditBody } from "../../routes/Users/@types";
 
 export class UserEdit {
    async execute(body: iUserEditBody) {

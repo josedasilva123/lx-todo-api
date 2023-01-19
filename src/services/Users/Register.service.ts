@@ -1,6 +1,7 @@
 import Users from "../../models/Users";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
+import { iUserRegisterBody } from "../../routes/Users/@types";
 
 export class UserRegister {
    async execute(body: iUserRegisterBody) {

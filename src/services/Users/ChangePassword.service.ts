@@ -1,6 +1,7 @@
 import { ObjectId } from "mongodb";
 import Users from "../../models/Users";
 import bcrypt from "bcryptjs";
+import { iUserChangePasswordBody } from "../../routes/Users/@types";
 
 export class UserChangePassword {
    async execute(body: iUserChangePasswordBody) {

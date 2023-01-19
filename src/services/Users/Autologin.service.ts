@@ -1,5 +1,6 @@
 import { ObjectId } from "mongodb";
 import Users from "../../models/Users";
+import { iAuthenticatedBody } from "../../routes/Users/@types";
 
 export class UserAutoLogin{
     async execute(body: iAuthenticatedBody){

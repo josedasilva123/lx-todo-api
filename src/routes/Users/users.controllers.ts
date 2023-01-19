@@ -4,6 +4,7 @@ import { UserChangePassword } from "../../services/Users/ChangePassword.service"
 import { UserEdit } from "../../services/Users/Edit.service";
 import { UserLogin } from "../../services/Users/Login.service";
 import { UserRegister } from "../../services/Users/Register.service";
+import { iUserRegisterBody, iUserLoginBody, iUserEditBody, iUserChangePasswordBody } from "./@types";
 
 export default class UsersControllers {
    static async Register(req: Request<{}, {}, iUserRegisterBody, {}>, res: Response) {
