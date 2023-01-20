@@ -29,6 +29,7 @@ Padrão de resposta:
    "message": "Cadastro realizado com sucesso!"
 }
 ```
+- - -
 
 ### Login POST `/users/login`
 
@@ -53,6 +54,7 @@ Padrão de resposta:
    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2NhY2Q1NzEzNjEzM2I1NjYwMWM5NDQiLCJpYXQiOjE2NzQyMzUyNzIsImV4cCI6MTY3NDI3ODQ3Mn0.Oh55-WUlDnklKZoWqQuygb78JFEdplkzub_u--QIg88"
 }
 ```
+- - -
 
 ### Autorização (Rotas Protegidas)
 
@@ -67,6 +69,7 @@ Dessa maneira:
    }
 }
 ```
+- - -
 
 ### AutoLogin GET `/users/profile`
 
@@ -81,6 +84,7 @@ Padrão de resposta:
    "email": "johndoe@email.com.br"
 }
 ```
+- - -
 
 ### Edit User PATCH `/users`
 
@@ -99,6 +103,7 @@ Padrão de resposta:
    "message": "Usuário editado com sucesso!"
 }
 ```
+- - -
 
 ### Change Password PATCH `/users/password`
 
@@ -110,6 +115,7 @@ Padrão de corpo:
 	"newPassword": "@12Patinhos"
 }
 ```
+- - -
 
 Padrão de resposta:
 
@@ -118,6 +124,7 @@ Padrão de resposta:
 	"message": "Senha alterada com sucesso!"
 }
 ```
+- - -
 
 ## Rotas de Todos
 
@@ -150,6 +157,7 @@ Padrão de resposta:
 	"message": "Nota cadastrada com sucesso!"
 }
 ```
+- - -
 
 ### Todos Update PATCH `/todos/:noteId` (Precisa de Autorização)
 
@@ -170,6 +178,7 @@ Padrão de resposta:
 	"message": "Nota editada com sucesso!"
 }
 ```
+- - -
 
 ### Todos Delete DELETE `/todos/:noteId` (Precisa de Autorização)
 
@@ -180,6 +189,7 @@ Padrão de resposta
 	"message": "Nota excluida com sucesso!"
 }    
 ```
+- - -
 
 ### Todos Read GET `/todos` (Precisa de Autorização)
 
@@ -251,6 +261,7 @@ A rota suporta os respectivos parâmetros:
 | limit  | Quantidade de itens por página |
 | category | Slug da categoria |
 | search | Busca com base no título da nota |
+- - -
 
 ### Todos Read One GET `/todos/:noteId` (Precisa de Autorização)
 
@@ -268,6 +279,7 @@ Padrão de resposta:
 	"__v": 0
 }
 ```
+- - -
 
 ## Rotas de Categorias
 
@@ -289,6 +301,7 @@ Padrão de Resposta:
 	"message": "Categoria criada com sucesso!"
 }
 ```
+- - -
 
 ### Categories Delete DELETE `/categories/:categoryId` (Precisa de Autorização)
 
@@ -299,6 +312,7 @@ Padrão de Resposta:
 	"message": "Categoria excluida com sucesso!"
 }
 ```
+- - -
 
 ### Categories Read GET `/categories/` (Precisa de Autorização)
 
@@ -328,4 +342,4 @@ A rota suporta os respectivos parâmetros:
 | skip   | Inicio da filtragem |
 | limit  | Quantidade de itens por página |
 
-===
+- - -
