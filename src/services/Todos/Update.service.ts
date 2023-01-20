@@ -18,7 +18,7 @@ export class TodoUpdate {
          throw new Error("Você não tem autorização para editar essa nota");
       }
 
-      const updatedNote = await Todos.updateOne(
+      await Todos.updateOne(
          { _id: todoObjectId },
          {
             $set: {
@@ -29,6 +29,6 @@ export class TodoUpdate {
          }
       );
 
-      return { note: updatedNote, message: "Nota editada com sucesso!" };
+      return { message: "Nota editada com sucesso!" };
    }
 }
