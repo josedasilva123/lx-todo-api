@@ -2,7 +2,6 @@ import { Router } from "express";
 import { Authenticate } from "../../middlewares/authenticate";
 import { HandleErrors } from "../../middlewares/handleErrors";
 import { Validate } from "../../middlewares/handleValidation";
-import Categories from "../../models/Categories";
 import CategoriesControlers from "./categories.controllers";
 import { categoriesCreateValidation, categoriesDeleteValidation } from "./categories.validations";
 
