@@ -68,7 +68,7 @@ Dessa maneira:
 }
 ```
 
-### AutoLogin GET /users/profile
+### AutoLogin GET `/users/profile`
 
 Para essa rota será necessário somente a passagem do token
 
@@ -121,7 +121,7 @@ Padrão de resposta:
 
 ## Rotas de Todos
 
-### Todo Create POST `todos` (Precisa de Autorização)
+### Todo Create POST `/todos` (Precisa de Autorização)
 
 Padrão de corpo:
 
