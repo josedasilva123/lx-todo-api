@@ -5,6 +5,7 @@ import Users from "../../models/Users";
 import { serverHttp } from "../../server";
 
 beforeAll(async () => {
+   mongoose.set('strictQuery', true);
    await mongoose.connect("mongodb://localhost:27017/lxtodo-todo-test");
    //User A
    await request(serverHttp).post("/users/").send({
@@ -64,13 +65,13 @@ describe("Todos Routes (Update)", () => {
          password: "@12Patinhos",
       });
 
-      const getTech = await request(serverHttp)
+      const getNote = await request(serverHttp)
       .get("/todos")
       .set("auth", login.body.token)
       expect(200);
 
       const response = await request(serverHttp)
-      .patch(`/todos/${getTech.body.todos[0]._id}`)
+      .patch(`/todos/${getNote.body.todos[0]._id}`)
       .send({
          title: 'Título atualizado',
          content: 'Conteúdo atualizado',
@@ -88,13 +89,13 @@ describe("Todos Routes (Update)", () => {
          password: "@12Patinhos",
       });
 
-      const getTech = await request(serverHttp)
+      const getNote = await request(serverHttp)
       .get("/todos")
       .set("auth", login.body.token)
       expect(200);
 
       const response = await request(serverHttp)
-      .patch(`/todos/${getTech.body.todos[0]._id}`)
+      .patch(`/todos/${getNote.body.todos[0]._id}`)
       .send({
          title: 'Título atualizado',
          content: 'Conteúdo atualizado',
@@ -128,7 +129,7 @@ describe("Todos Routes (Update)", () => {
          password: "@12Patinhos",
       });
 
-      const getTech = await request(serverHttp)
+      const getNote = await request(serverHttp)
       .get("/todos")
       .set("auth", login.body.token)
       expect(400);
@@ -139,7 +140,7 @@ describe("Todos Routes (Update)", () => {
       });
 
       const response = await request(serverHttp)
-      .patch(`/todos/${getTech.body.todos[0]._id}`)
+      .patch(`/todos/${getNote.body.todos[0]._id}`)
       .send({
          title: 'Título atualizado',
          content: 'Conteúdo atualizado',
@@ -187,13 +188,13 @@ describe("Todos Routes (Read)", () => {
          password: "@12Patinhos",
       });
 
-      const getTech = await request(serverHttp)
+      const getNote = await request(serverHttp)
       .get("/todos")
       .set("auth", login.body.token)
       .expect(200);
 
       const response = await request(serverHttp)
-      .get(`/todos/${getTech.body.todos[0]._id}`)
+      .get(`/todos/${getNote.body.todos[0]._id}`)
       .set("auth", login.body.token)
       .expect(200)
       
@@ -221,7 +222,7 @@ describe("Todos Routes (Delete)", () => {
          password: "@12Patinhos",
       });
 
-      const getTech = await request(serverHttp)
+      const getNote = await request(serverHttp)
       .get("/todos")
       .set("auth", login.body.token)
       expect(400);
@@ -232,7 +233,7 @@ describe("Todos Routes (Delete)", () => {
       });
 
       const response = await request(serverHttp)
-      .delete(`/todos/${getTech.body.todos[0]._id}`)
+      .delete(`/todos/${getNote.body.todos[0]._id}`)
       .set("auth", login2.body.token)
       .expect(400)
 
@@ -245,13 +246,13 @@ describe("Todos Routes (Delete)", () => {
          password: "@12Patinhos",
       });
 
-      const getTech = await request(serverHttp)
+      const getNote = await request(serverHttp)
       .get("/todos")
       .set("auth", login.body.token)
       expect(200);
 
       const response = await request(serverHttp)
-      .delete(`/todos/${getTech.body.todos[0]._id}`)      
+      .delete(`/todos/${getNote.body.todos[0]._id}`)      
       .set("auth", login.body.token)
       .expect(200)
 
