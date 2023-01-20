@@ -7,7 +7,7 @@ export interface iTodoCreateBody extends iAuthenticatedBody{
 }
 
 export interface iTodoDeleteParams{
-    noteId: string;
+    noteId?: string;
 }
 
 export interface iTodoUpdateBody extends iAuthenticatedBody{
@@ -17,7 +17,7 @@ export interface iTodoUpdateBody extends iAuthenticatedBody{
 }
 
 export interface iTodoUpdateParams{
-    noteId: string;
+    noteId?: string;
 }
 
 export interface iTodoReadQuery{
@@ -29,5 +29,5 @@ export interface iTodoReadQuery{
 }
 
 export interface iTodoReadOneParams{
-    noteId: string;
+    noteId?: string;
 }
