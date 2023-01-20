@@ -1,8 +1,10 @@
 import { ObjectId } from "mongodb";
 import Categories from "../../models/Categories";
+import { iCategoryDeleteParams } from "../../routes/Categories/@types";
+import { iAuthenticatedBody } from "../../routes/Users/@types";
 
 export class CategoryDelete{
-    async execute(body: any, params: any){
+    async execute(body: iAuthenticatedBody, params: iCategoryDeleteParams){
         const { _id } = body;
         const { categoryId } = params;
 

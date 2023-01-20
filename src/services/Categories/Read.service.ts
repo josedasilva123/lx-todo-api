@@ -1,7 +1,9 @@
 import Categories from "../../models/Categories";
+import { iCategoryReadQuery } from "../../routes/Categories/@types";
+import { iAuthenticatedBody } from "../../routes/Users/@types";
 
 export class CategoryRead {
-   async execute(body: any, query: any) {
+   async execute(body: iAuthenticatedBody, query: iCategoryReadQuery) {
       const { _id } = body;
       const { limit, skip } = query;
 

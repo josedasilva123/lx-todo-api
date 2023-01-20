@@ -1,7 +1,8 @@
 import Categories from "../../models/Categories";
+import { iCategoryCreateBody } from "../../routes/Categories/@types";
 
 export class CategoryCreate{
-    async execute(body: any){
+    async execute(body: iCategoryCreateBody){
         const { _id, label, slug } = body;
 
         const category = {
