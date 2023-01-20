@@ -4,6 +4,7 @@ import Users from "../../models/Users";
 import { serverHttp } from "../../server";
 
 beforeAll(async () => {
+   mongoose.set("strictQuery", true);
    await mongoose.connect("mongodb://localhost:27017/lxtodo-user-test");
 });
 
