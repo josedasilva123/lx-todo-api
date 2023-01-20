@@ -7,7 +7,7 @@ export class TodoRead {
       const { _id } = body;
       const { category, search, limit, skip } = query;
 
-      let newQuery = {  };
+      let newQuery = {};
 
       if (category) {
          newQuery = { ...newQuery, category };
