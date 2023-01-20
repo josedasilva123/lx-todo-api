@@ -23,4 +23,10 @@ export const todosUpdateValidation = () => {
    ];
 };
 
+export const todosReadOneValidation = () => {
+   return [
+      param("noteId").isString().withMessage("O parâmetro nodeId é obrigatório.")
+   ];
+};
+
 
