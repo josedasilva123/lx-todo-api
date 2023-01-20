@@ -115,7 +115,6 @@ Padrão de corpo:
 	"newPassword": "@12Patinhos"
 }
 ```
-- - -
 
 Padrão de resposta:
 
