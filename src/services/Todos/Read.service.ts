@@ -1,7 +1,8 @@
 import Todos from "../../models/Todos";
+import { iTodoReadQuery } from "../../routes/Todos/@types";
 
-export class TodosRead {
-   async execute(query: any) {
+export class TodoRead {
+   async execute(query: iTodoReadQuery) {
       const { category, userId, search, limit, skip } = query;
 
       let newQuery = {};

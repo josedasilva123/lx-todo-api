@@ -1,7 +1,8 @@
 import Todos from "../../models/Todos";
+import { iTodoCreateBody } from "../../routes/Todos/@types";
 
 export class TodoCreate{
-    async execute(body: any){
+    async execute(body: iTodoCreateBody){
         const { _id, title, content, category } = body;
 
         const todo = {

@@ -1,9 +1,10 @@
 import { ObjectId } from "mongodb";
 import Todos from "../../models/Todos";
+import { iTodoDeleteParams } from "../../routes/Todos/@types";
 import { iAuthenticatedBody } from "../../routes/Users/@types";
 
 export class TodoDelete {
-   async execute(body: iAuthenticatedBody, params: any) {
+   async execute(body: iAuthenticatedBody, params: iTodoDeleteParams) {
       const { noteId } = params;
       const { _id } = body;
       const todoObjectId = new ObjectId(noteId);

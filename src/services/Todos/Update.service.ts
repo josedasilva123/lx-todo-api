@@ -1,8 +1,9 @@
 import { ObjectId } from "mongodb";
 import Todos from "../../models/Todos";
+import { iTodoUpdateBody, iTodoUpdateParams } from "../../routes/Todos/@types";
 
-export class TodosUpdate {
-   async execute(body: any, params: any) {
+export class TodoUpdate {
+   async execute(body: iTodoUpdateBody, params: iTodoUpdateParams) {
       const { noteId } = params;
       const { _id, title, content, category } = body;
       const todoObjectId = new ObjectId(noteId);
