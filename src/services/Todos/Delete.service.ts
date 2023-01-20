@@ -16,7 +16,7 @@ export class TodoDelete {
       }
 
       if (note.userId !== _id) {
-         throw new Error("Você não tem autorização para excluir essa nota");
+         throw new Error("Você não tem autorização para excluir essa nota.");
       }
 
       await Todos.deleteOne({ _id: todoObjectId  });

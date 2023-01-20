@@ -9,7 +9,7 @@ const TodosRouter = Router();
 
 TodosRouter.post("/", Authenticate, todosCreateValidation(), Validate, HandleErrors(TodosControllers.Create));
 TodosRouter.delete("/:noteId", Authenticate, todosDeleteValidation(), Validate, HandleErrors(TodosControllers.Delete));
-TodosRouter.put("/:noteId", Authenticate, todosUpdateValidation(), Validate, HandleErrors(TodosControllers.Update));
+TodosRouter.patch("/:noteId", Authenticate, todosUpdateValidation(), Validate, HandleErrors(TodosControllers.Update));
 TodosRouter.get("/", Authenticate, HandleErrors(TodosControllers.Read));
 TodosRouter.get("/:noteId", Authenticate, HandleErrors(TodosControllers.ReadOne));
 

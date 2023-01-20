@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import request from "supertest";
-import User from "../../models/Users";
+import Users from "../../models/Users";
 import { serverHttp } from "../../server";
 
 beforeAll(async () => {
@@ -187,6 +187,6 @@ describe("User Routes (Edit)", () => {
 });
 
 afterAll(async () => {
-   await User.deleteMany();
+   await Users.deleteMany();
    mongoose.disconnect();
 });

@@ -15,7 +15,7 @@ export class TodoUpdate {
       }
 
       if (note.userId !== _id) {
-         throw new Error("Você não tem autorização para editar essa nota");
+         throw new Error("Você não tem autorização para editar essa nota.");
       }
 
       await Todos.updateOne(
