@@ -20,5 +20,7 @@ export class TodoDelete {
       }
 
       await Todos.deleteOne({ _id: todoObjectId  });
+
+      return { message: 'Nota excluida com sucesso!'}
    }
 }
