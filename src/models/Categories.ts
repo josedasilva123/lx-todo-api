@@ -1,12 +1,14 @@
 import { Schema, model } from "mongoose";
 
 interface iCategory {
+   userId: string;
    label: string;
    slug: string;
 }
 
-const categorySchema = new Schema(
+const categorySchema = new Schema<iCategory>(
    {
+      userId: { type: String, required: true },
       label: { type: String, required: true },
       slug: { type: String, required: true },
    },
@@ -15,6 +17,6 @@ const categorySchema = new Schema(
    }
 );
 
-const Categories = model("Categories", categorySchema, "categories");
+const Categories = model<iCategory>("Categories", categorySchema, "categories");
 
 export default Categories;
