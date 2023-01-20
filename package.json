@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npx tsc",
-    "start": "node app/index.js",
+    "start": "node app/src/index.js",
     "start:dev": "nodemon",
     "test": "jest"
   },
