@@ -29,9 +29,9 @@ export default class TodosControllers {
       res.status(200).json(response);
    }
 
-   static async Read(req: Request<{}, {}, {}, iTodoReadQuery>, res: Response) {
+   static async Read(req: Request<{}, {}, iAuthenticatedBody, iTodoReadQuery>, res: Response) {
       const read = new TodoRead();
-      const response = await read.execute(req.query);
+      const response = await read.execute(req.body, req.query);
 
       res.status(200).json(response);
    }
